@@ -1,0 +1,14 @@
+query GetPosts {
+  posts {
+    id
+    likes
+    date
+    slug
+    excerpt
+    title
+    tags
+    author {
+      name
+    }
+  }
+}
