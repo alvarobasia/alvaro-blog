@@ -1,3 +1,4 @@
+'use client';
 import React, {useState, ReactElement} from 'react';
 
 interface ButtonProps {
@@ -15,9 +16,11 @@ const Variants = {
 
 const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   const [isOnMouseOver, setIsOnMouseOver] = useState(false);
+
   const newIconColor = React.cloneElement(props.icon, {
     color: isOnMouseOver ? 'white' : 'black',
   });
+
   return (
     <button
       onMouseOver={() => setIsOnMouseOver(true)}
