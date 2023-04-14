@@ -24,6 +24,8 @@
     "rules": {
         "react/react-in-jsx-scope": "off",
         "require-jsdoc": "off",
-        "max-len": "off"
+        "max-len": "off",
+        "@next/next/no-page-custom-font": "off",
+        "@next/next/no-head-element": "off"
     }
 }
