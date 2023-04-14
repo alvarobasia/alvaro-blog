@@ -1,8 +1,9 @@
 'use client';
-import {Post} from '../../graphql/generated';
+
 import {format} from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import Tags from '../base/Tags';
+import {Post} from '../elements/BlogHome';
 
 interface PostCardProps {
   post: Post;

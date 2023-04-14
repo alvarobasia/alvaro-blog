@@ -1,9 +1,7 @@
 'use client';
 
 import React from 'react';
-import {ApolloProvider} from '@apollo/client';
 import Sidebar from '../src/components/elements/Sidebar';
-import {client} from '../src/lib/apollo';
 import {Texture} from '../src/styles/Texture';
 import './global.css';
 type props = {
@@ -30,13 +28,11 @@ export default function RootLayout({children}: props) {
         />
       </head>
       <body>
-        <ApolloProvider client={client}>
-          <div className="w-[100vw] h-[100vh] flex flex-row">
-            <Sidebar />
-            {children}
-            <Texture />
-          </div>
-        </ApolloProvider>
+        <div className="w-[100vw] h-[100vh] flex flex-row">
+          <Sidebar />
+          {children}
+          <Texture />
+        </div>
       </body>
     </html>
   );
