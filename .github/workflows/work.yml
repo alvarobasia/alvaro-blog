@@ -52,4 +52,5 @@ jobs:
           urls: |
             https://alvaro-blog-nine.vercel.app/
           runs: 1
+          configPath: '.github/lighthouse/custom-config/lighthouserc-desktop-config.json'
           uploadArtifacts: true
