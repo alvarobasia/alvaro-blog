@@ -45,18 +45,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+
+      - name: Run Lighthouse on urls and validate with lighthouserc
+        uses: treosh/lighthouse-ci-action@v2
         with:
-          node-version: 16.18
-      - name: Install dependencies
-        run: |
-          yarn ci && yarn add -g @lhci/cli@0.6.x
-      - name: Build
-        run: |
-          yarn build
-      - name: Run Lighthouse CI
-        run: |
-          lhci autorun --upload.target=temporary-public-storage --collect.staticDistDir=build
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          urls: |
+            https://alvaro-blog-nine.vercel.app/
+          runs: 1
+          uploadArtifacts: true
