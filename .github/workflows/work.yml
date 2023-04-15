@@ -1,4 +1,4 @@
-name: Run tests and lint
+name: Run tests, lint and coverage
 
 on:
   push:
@@ -40,4 +40,24 @@ jobs:
       - name: Run tests
         run: |
           yarn test
+
+  coverage:
+      runs-on: ubuntu-latest
+      needs: [lint, tests]
+      steps:
+        - uses: actions/checkout@v2
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: 16.18
+        - name: Install dependencies
+          run: |
+            yarn ci
+        - name: Run coverage
+          run: |
+            yarn test --coverage
+        - name: Coverage Report as Comment (Clover)
+          uses: lucassabreu/comment-coverage-clover@main
+          with:
+            file: coverage/clover.xml
 
