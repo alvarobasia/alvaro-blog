@@ -1,0 +1,62 @@
+name: Run tests and lint
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches: 
+      - main
+
+
+
+jobs:
+  lint:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: 16.18
+        - name: Install dependencies
+          run: |
+            yarn ci
+        - name: Run eslint
+          run: |
+            yarn lint
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.18
+      - name: Install dependencies
+        run: |
+          yarn ci
+      - name: Run tests
+        run: |
+          yarn test
+
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.18
+      - name: Install dependencies
+        run: |
+          yarn ci && yarn add -g @lhci/cli@0.6.x
+      - name: Build
+        run: |
+          yarn build
+      - name: Run Lighthouse CI
+        run: |
+          lhci autorun --upload.target=temporary-public-storage --collect.staticDistDir=build
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
