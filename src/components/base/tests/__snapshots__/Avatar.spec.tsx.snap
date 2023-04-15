@@ -1,0 +1,45 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Test Avatar component > should render Avatar component 1`] = `
+<body>
+  <div>
+    <div
+      class="overflow-hidden w-[100px] h-[100px] rounded-full bg-slate-700 border-2 border-white"
+    >
+      <img
+        alt="Imagem do desenvolvedor do blog"
+        data-nimg="1"
+        decoding="async"
+        height="100"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fgithub.com%2Falvarobasia.png&w=256&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fgithub.com%2Falvarobasia.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fgithub.com%2Falvarobasia.png&w=256&q=75 2x"
+        style="color: transparent;"
+        width="100"
+      />
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Test Avatar component > should render Avatar component 2`] = `
+<body>
+  <div>
+    <div
+      class="overflow-hidden w-[100px] h-[100px] rounded-full bg-slate-700 border-2 border-white"
+    >
+      <img
+        alt="Imagem do desenvolvedor do blog"
+        data-nimg="1"
+        decoding="async"
+        height="100"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fgithub.com%2Falvarobasia.png&w=256&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fgithub.com%2Falvarobasia.png&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Fgithub.com%2Falvarobasia.png&w=256&q=75 2x"
+        style="color: transparent;"
+        width="100"
+      />
+    </div>
+  </div>
+</body>
+`;

@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Test Tags component > should render Avatar component 1`] = `
+<body>
+  <div>
+    <div
+      class="px-2 border-2 rounded-2xl border-blue-500 cursor-pointer group hover:border-white"
+    >
+      <span
+        class="text-blue-500 text-sm group-hover:text-white transition-all"
+      >
+        #
+        teste
+      </span>
+    </div>
+  </div>
+</body>
+`;

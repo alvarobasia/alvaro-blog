@@ -1,0 +1,101 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Test Button component > should render Button component 1`] = `
+<body>
+  <div>
+    <button
+      class=" p-2 bg-blue-500 hover:bg-blue-700 text-xl transition-all flex flex-row items-center gap-2 rounded group w-40 font-light justify-evenly"
+    >
+      <svg
+        fill="black"
+        height="1em"
+        viewBox="0 0 256 256"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="none"
+          height="256"
+          width="256"
+        />
+        <circle
+          cx="116"
+          cy="116"
+          fill="none"
+          r="84"
+          stroke="black"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="16"
+        />
+        <line
+          fill="none"
+          stroke="black"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="16"
+          x1="175.4"
+          x2="224"
+          y1="175.4"
+          y2="224"
+        />
+      </svg>
+      <p
+        class="group-hover:font-serif group-hover:italic group-hover:text-white"
+      >
+        Teste
+      </p>
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Test Button component > should render Button component 2`] = `
+<body>
+  <div>
+    <button
+      class=" p-2 bg-blue-500 hover:bg-blue-700 text-xl transition-all flex flex-row items-center gap-2 rounded group w-40 font-light justify-evenly"
+    >
+      <svg
+        fill="black"
+        height="1em"
+        viewBox="0 0 256 256"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="none"
+          height="256"
+          width="256"
+        />
+        <circle
+          cx="116"
+          cy="116"
+          fill="none"
+          r="84"
+          stroke="black"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="16"
+        />
+        <line
+          fill="none"
+          stroke="black"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="16"
+          x1="175.4"
+          x2="224"
+          y1="175.4"
+          y2="224"
+        />
+      </svg>
+      <p
+        class="group-hover:font-serif group-hover:italic group-hover:text-white"
+      >
+        Teste
+      </p>
+    </button>
+  </div>
+</body>
+`;
