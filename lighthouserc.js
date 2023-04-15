@@ -17,6 +17,7 @@ module.exports = {
               'splash-screen': 'off',
               'themed-omnibox': 'off',
               'works-offline': 'off',
+              'content-width': 'off',
           }
       },
     },
