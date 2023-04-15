@@ -41,16 +41,14 @@ jobs:
         run: |
           yarn test
 
-  lighthouse:
+
+  lighthouseci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Run Lighthouse on urls and validate with lighthouserc
-        uses: treosh/lighthouse-ci-action@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          urls: |
-            https://alvaro-blog-nine.vercel.app/
-          runs: 1
-          configPath: '.github/lighthouse/custom-config/lighthouserc-desktop-config.json'
-          uploadArtifacts: true
+          node-version: 16
+      - run: yarn ci
+      - run: yarn build
+      - run: npx lhci autorun
