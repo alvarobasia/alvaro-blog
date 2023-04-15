@@ -10,7 +10,7 @@ type props = {
 
 export default function RootLayout({children}: props) {
   return (
-    <html>
+    <html lang="pt-BR">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
