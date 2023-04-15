@@ -3,6 +3,13 @@ module.exports = {
     collect: {
       url: ['http://localhost:3000/'],
       startServerCommand: 'yarn start',
+      settings: {
+        emulatedFormFactor: 'desktop',
+        disableDeviceEmulation: false,
+        disableCpuThrottling: false,
+        disableNetworkThrottling: false,
+        throttlingMethod: 'provided'
+      },
       assert: {
         preset: 'lighthouse:recommended',
           assertions: {
