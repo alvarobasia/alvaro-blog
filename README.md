@@ -1,1 +1,2 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/f5dde19cc1a9ae41156f/maintainability)](https://codeclimate.com/github/alvarobasia/alvaro-blog/maintainability)
+<a href="https://codeclimate.com/github/alvarobasia/alvaro-blog/test_coverage"><img src="https://api.codeclimate.com/v1/badges/f5dde19cc1a9ae41156f/test_coverage" /></a>
