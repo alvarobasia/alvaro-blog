@@ -1,3 +1,4 @@
+'use client';
 import {BookOpen, MagnifyingGlass} from 'phosphor-react';
 import Avatar from '../base/Avatar';
 import Button from '../base/Button';

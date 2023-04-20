@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogHome from '../src/components/elements/BlogHome';
+import {BlogHome} from '../components/elements/BlogHome';
 
 export const metadata = {
   title: 'Blog Home',
@@ -9,6 +9,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
+      {/* @ts-expect-error  */}
       <BlogHome />
     </>
   );
