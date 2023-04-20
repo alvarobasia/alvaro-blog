@@ -1,25 +1,20 @@
 'use client';
 
+import {Post, PostApi, postApiToPost} from '../../types/Post';
 import PostCard from '../complex/PostCard';
 
-export interface Post {
-  id: number;
-  date: Date;
-  excerpt: string;
-  title: string;
-  tags: string[];
-}
+export const revalidate = 3600; // revalidate this page every 3600 seconds
 
-const BlogHome: React.FC = () => {
-  const posts: Post[] = [
+export async function BlogHome() {
+  const raw: PostApi[] = await fetch(
+    'https://www.tabnews.com.br/api/v1/contents/deVictorMendes?page=1&per_page=12&strategy=new',
     {
-      id: 1,
-      date: new Date(),
-      excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      title: 'Lorem ipsum dolor sit amet',
-      tags: ['tag1', 'tag2', 'tag3'],
-    },
-  ];
+      method: 'GET',
+    }
+  ).then((res) => res.json());
+
+  const posts = raw.map((post) => postApiToPost(post));
+
   return (
     <div className="flex-1 bg-gray-800 p-20 overflow-scroll overflow-x-hidden h-[100%]">
       <ul className="flex flex-col gap-11">
@@ -29,6 +24,4 @@ const BlogHome: React.FC = () => {
       </ul>
     </div>
   );
-};
-
-export default BlogHome;
+}

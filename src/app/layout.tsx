@@ -1,8 +1,6 @@
-'use client';
-
 import React from 'react';
-import Sidebar from '../src/components/elements/Sidebar';
-import {Texture} from '../src/styles/Texture';
+import Sidebar from '../components/elements/Sidebar';
+import {Texture} from '../styles/Texture';
 import './global.css';
 type props = {
   children: React.ReactNode;
